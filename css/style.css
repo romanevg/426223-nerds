@@ -1,0 +1,34 @@
+﻿body {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #283136;
+    font-weight: normal;
+    font-family: Roboto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 55px;
+    line-height: 55px;
+    color: black;
+    font-weight: 500;
+    font-family: Roboto;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 30px;
+    color: black;
+    font-weight: bold;
+    font-family: Roboto;
+}
