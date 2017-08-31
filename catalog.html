@@ -6,39 +6,42 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
-  <header class="header">
-    <nav class="header-navigation">
-      <a class="header-logo" href="index.html">
-        <img src="img/nerds-logo.svg" alt="Логотип «Нёрдс»">
-      </a>
-      <ul class="header-menu">
-        <li class="header-menu__item"><a class="header-menu__link" href="info.html">Студия</a></li>
-        <li class="header-menu__item"><a class="header-menu__link" href="clients.html">Клиенты</a></li>
-        <li class="header-menu__item"><a class="header-menu__link" href="catalog.html">Магазин</a></li>
-        <li class="header-menu__item"><a class="header-menu__link" href="contacts.html">Контакты</a></li>
+  <header class="main-header">
+    <a class="main-header__logo" href="index.html">
+      <img src="img/nerds-logo.svg" alt="Логотип «Нёрдс»">
+    </a>
+    <nav class="main-nav">
+      <ul class="main-nav__list  list">
+        <li class="main-nav__item"><a class="main-nav__link" href="info.html">Студия</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="clients.html">Клиенты</a></li>
+        <li class="main-nav__item"><a class="main-nav__link  main-nav__link--current" href="#">Магазин</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="contacts.html">Контакты</a></li>
       </ul>
-      <ul class="header-cart">
-        <li class="header-cart__item"><a class="header-cart__link" href="cart.html">Корзина</a></li>
+      <ul class="main-nav__cart-list  list">
+        <li class="main-nav__item  main-nav__cart-item"><a class="main-nav__link  main-nav__cart-link" href="cart.html">Корзина</a></li>
       </ul>
     </nav>
   </header>
 
 
   <main class="container">
-    <h1 class="container-title">Магазин готовых шаблонов</h1>
+    <div class="title-background">
+      <h1 class="container-title">Магазин готовых шаблонов</h1>
+    </div>
 
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form class="filters__form" method="get" action="https://echo.nerds.ru">
         <fieldset class="filters__fieldset">
           <legend class="filters__legend">Стоимость:</legend>
-          <img class="filters__cost-range-img" src="img/range-img.jpg" alt="Выберите стоимость">
-          <label class="filters__label">
+          <div class="filters__cost-range-img"></div>
+          <label class="filters__label--text">
             От
             <input class="filters__input  filters__input--text" type="text" name="min-cost" placeholder="0">
           </label>
-          <label class="filters__label">
+          <label class="filters__label--text">
             До
             <input class="filters__input  filters__input--text" type="text" name="max-cost" placeholder="15 000">
           </label>
@@ -46,7 +49,7 @@
 
         <fieldset class="filters__fieldset">
           <legend class="filters__legend">Сетка:</legend>
-          <ul class="filters__list  filters__list--radio">
+          <ul class="filters__list  filters__list--radio  list">
             <li class="filters__option">
               <input class="filters__input  filters__input--radio  visually-hidden" id="adaptive" type="radio" name="grid-group" value="adaptive" checked>
               <label class="filters__label  filters__label--radio" for="adaptive">Адаптивная</label>
@@ -64,7 +67,7 @@
 
         <fieldset class="filters__fieldset">
           <legend class="filters__legend">Особенности:</legend>
-          <ul class="filters__list  filters__list--checkbox">
+          <ul class="filters__list  filters__list--checkbox  list">
             <li class="filters__option">
               <input class="filters__input  filters__input--checkbox  visually-hidden" id="slider" type="checkbox" name="slider" checked>
               <label class="filters__label  filters__label--checkbox" for="slider">Слайдер</label>
@@ -87,14 +90,14 @@
             </li>
           </ul>
         </fieldset>
-        <button class="filter-button button" type="submit">Показать</button>
+        <button class="button  filters__button" type="submit">Показать</button>
       </form>
     </section>
 
 
     <section class="sort">
       <h2 class="sort__title">Сортировать</h2>
-      <ul class="sort__list">
+      <ul class="sort__list  list">
         <li class="sort__item"><a class="sort__link" href="#">По цене</a></li>
         <li class="sort__item"><a class="sort__link" href="#">По типу</a></li>
         <li class="sort__item"><a class="sort__link" href="#">По названию</a></li>
@@ -106,9 +109,9 @@
 
     <section class="catalog">
       <h2 class="visually-hidden">Перечень сайтов</h2>
-      <ul class="catalog__list">
+      <ul class="catalog__list  list">
         <li class="catalog__item">
-          <ul class="catalog__browser-head">
+          <ul class="catalog__browser-head  list">
             <li class="catalog__browser-point"></li>
             <li class="catalog__browser-point"></li>
             <li class="catalog__browser-point"></li>
@@ -124,7 +127,7 @@
         </li>
 
         <li class="catalog__item">
-          <ul class="catalog__browser-head">
+          <ul class="catalog__browser-head  list">
             <li class="catalog__browser-point"></li>
             <li class="catalog__browser-point"></li>
             <li class="catalog__browser-point"></li>
@@ -138,8 +141,9 @@
             <a class="button catalog__popup-button  catalog__popup-button--red  pink-app" href="#">9 900 руб.</a>
           </div>
         </li>
+
         <li class="catalog__item">
-          <ul class="catalog__browser-head">
+          <ul class="catalog__browser-head  list">
             <li class="catalog__browser-point"></li>
             <li class="catalog__browser-point"></li>
             <li class="catalog__browser-point"></li>
@@ -153,8 +157,9 @@
             <a class="button catalog__popup-button  catalog__popup-button--red  barbershop" href="#">9 900 руб.</a>
           </div>
         </li>
+
         <li class="catalog__item">
-          <ul class="catalog__browser-head">
+          <ul class="catalog__browser-head  list">
             <li class="catalog__browser-point"></li>
             <li class="catalog__browser-point"></li>
             <li class="catalog__browser-point"></li>
@@ -168,8 +173,9 @@
             <a class="button catalog__popup-button  catalog__popup-button--red  mishka" href="#">9 900 руб.</a>
           </div>
         </li>
+
         <li class="catalog__item">
-          <ul class="catalog__browser-head">
+          <ul class="catalog__browser-head  list">
             <li class="catalog__browser-point"></li>
             <li class="catalog__browser-point"></li>
             <li class="catalog__browser-point"></li>
@@ -183,8 +189,9 @@
             <a class="button catalog__popup-button  catalog__popup-button--red  a-plus" href="#">9 900 руб.</a>
           </div>
         </li>
+
         <li class="catalog__item">
-          <ul class="catalog__browser-head">
+          <ul class="catalog__browser-head  list">
             <li class="catalog__browser-point"></li>
             <li class="catalog__browser-point"></li>
             <li class="catalog__browser-point"></li>
@@ -204,7 +211,7 @@
 
     <section class="pagination">
       <h2 class="visually-hidden">Пагинация</h2>
-      <ul class="pagination__list">
+      <ul class="pagination__list  list">
         <li class="pagination__item  pagination__item--current"><a class="pagination__link">1</a></li>
         <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
         <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
@@ -216,11 +223,11 @@
     <section class="contacts">
       <h2 class="visually-hidden">Контактная информация</h2>
       <div class="contacs__map">
-        <div class="contacts__info">
-          <b class="contacts__title">Nerds design studio</b>
-          <p class="contacts__adress">191186, Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
-          <p class="contacts__phone">тел. +7(812)275-75-75</p>
-          <a class="button  contacts__button" href="#">Напишите нам</a>
+        <div class="contacts-block">
+          <b class="contacts-block__title">Nerds design studio</b>
+          <p class="contacts-block__adress">191186, Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
+          <p class="contacts-block__phone">тел. +7(812)275-75-75</p>
+          <a class="button  contacts-block__button" href="#">Напишите нам</a>
         </div>
         <img class="map" src="img/map.jpg" alt="Карта">
       </div>
@@ -229,17 +236,19 @@
 
 
   <footer class="main-footer">
-    <article class="social">
+    <section class="main-footer__social">
       <h2 class="visually-hidden">Иконки социальных сетей</h2>
-      <ul class="social__icons">
-        <li class="social__icon"><a class="social__link" href="https://vk.com">Вконтакте</a></li>
-        <li class="social__icon"><a class="social__link" href="https://facebook.com">Фейсбук</a></li>
-        <li class="social__icon"><a class="social__link" href="https://instagram.com">Инстаграм</a></li>
+      <ul class="social-list  list">
+        <li class="social-icon  social-icon--vk"><a href="https://vk.com">Вконтакте</a></li>
+        <li class="social-icon  social-icon--fb"><a href="https://facebook.com">Фейсбук</a></li>
+        <li class="social-icon  social-icon--in"><a href="https://instagram.com">Инстаграм</a></li>
       </ul>
-      <span class="main-footer__epigraph">Давайте дружить, это выгодно!</span>
-      <p class="main-footer__description">Скидка 10% для друзей из социальных сетей.</p>
-    </article>
+    </section>
+    <span class="main-footer__slogan">Давайте дружить, это выгодно!</span>
+    <p class="main-footer__sign">Скидка 10% для друзей из социальных сетей.</p>
   </footer>
+
+
   <section class="modal modal-letter">
     <h2 class="modal-letter__title">Напишите нам</h2>
     <form class="modal__form">
